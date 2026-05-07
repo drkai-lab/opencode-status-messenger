@@ -75,11 +75,26 @@ var INSTALL_KEY = "__INSTALL_KEY__";      // Replace with your key from bot
 var WORKER_URL = "__WORKER_URL__";        // Replace with your Worker URL
 ```
 
+**What is `WORKER_URL`?**  
+This is the public endpoint of your deployed Cloudflare Worker — the server that receives notifications from the Plugin and delivers Telegram messages. After running `wrangler deploy`, you'll see output like:
+
+```
+Your Worker is available at: https://opencode-telegram-bot.<your-account>.workers.dev
+```
+
+Use that full URL as `WORKER_URL`. The format is always:
+```
+https://<worker-name>.<account-subdomain>.workers.dev
+```
+
 Example:
 ```javascript
 var INSTALL_KEY = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
 var WORKER_URL = "https://opencode-telegram-bot.your-subdomain.workers.dev";
 ```
+
+**How the Plugin Uses It:**  
+When an OpenCode session completes, the Plugin sends a POST request to `WORKER_URL/notify` with your install key and session data. The Worker then looks up your Telegram chat ID from KV storage and delivers the notification via Telegram API.
 
 ### Step 4: Install to Plugin Directory
 
@@ -91,9 +106,12 @@ mv /tmp/telegram-notify.js ~/.config/opencode/plugin/telegram-notify.js
 ls -la ~/.config/opencode/plugin/telegram-notify.js
 ```
 
-### Step 5: Restart OpenCode
+### Step 5: Done
 
-Restart your OpenCode instance for the plugin to load. You'll receive a confirmation message on Telegram.
+Restart OpenCode or start your next session — the plugin will load automatically.
+
+**When Notifications Arrive:**  
+Notifications are sent **when an OpenCode task completes**, not immediately after installation. In other words, you'll receive your first Telegram message only after executing a task and its session ends.
 
 ---
 

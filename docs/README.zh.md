@@ -91,9 +91,12 @@ mv /tmp/telegram-notify.js ~/.config/opencode/plugin/telegram-notify.js
 ls -la ~/.config/opencode/plugin/telegram-notify.js
 ```
 
-### 步骤5: 重启OpenCode
+### 步骤5: 完成
 
-重启您的OpenCode实例以加载插件。您将在Telegram上收到确认消息。
+重启OpenCode或开始下一个会话，插件将自动加载。
+
+**通知时机:**  
+通知不是在安装后立即发送，而是在 **OpenCode完成任务时** 通过Telegram发送。也就是说，当您执行某个任务且该会话结束时，您才会首次收到消息。
 
 ---
 

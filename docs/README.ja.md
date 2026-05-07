@@ -91,9 +91,12 @@ mv /tmp/telegram-notify.js ~/.config/opencode/plugin/telegram-notify.js
 ls -la ~/.config/opencode/plugin/telegram-notify.js
 ```
 
-### ステップ5: OpenCodeを再起動
+### ステップ5: 完了
 
-プラグインがロードされるようOpenCodeインスタンスを再起動します。Telegramに確認メッセージが届きます。
+OpenCodeを再起動するか、または次のセッションを開始してください。プラグインは自動的に読み込まれます。
+
+**通知のタイミング:**  
+インストール直後ではなく、**OpenCodeがタスクを完了した際**にTelegramへ通知が届きます。つまり、何かタスクを実行してそのセッションが終了すると、初めてメッセージを受信します。
 
 ---
 

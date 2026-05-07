@@ -91,9 +91,12 @@ mv /tmp/telegram-notify.js ~/.config/opencode/plugin/telegram-notify.js
 ls -la ~/.config/opencode/plugin/telegram-notify.js
 ```
 
-### Paso 5: Reinicia OpenCode
+### Paso 5: Completado
 
-Reinicia tu instancia de OpenCode para que el plugin se cargue. Recibirás un mensaje de confirmación en Telegram.
+Reinicia tu instancia de OpenCode o inicia la siguiente sesión, el plugin se cargará automáticamente.
+
+**Momento de la notificación:**  
+La notificación no se envía inmediatamente después de la instalación, sino **cuando OpenCode completa una tarea** vía Telegram. Es decir, recibirás el primer mensaje cuando ejecutes alguna tarea y esa sesión termine。
 
 ---
 
