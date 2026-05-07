@@ -26,4 +26,5 @@ Thumbs.db
 *~
 
 .idea/
-docs/plans/*
+docs/plans/*.md
+!docs/plans/.gitkeep
