@@ -9,8 +9,8 @@
     "dev": "tsup --watch"
   },
   "devDependencies": {
-    "@opencode-ai/plugin": "1.0.203",
-    "@opencode-ai/sdk": "1.0.203",
+    "@opencode-ai/plugin": "1.14.40",
+    "@opencode-ai/sdk": "1.14.40",
     "tsup": "8.5.0",
     "typescript": "5.8.3"
   }

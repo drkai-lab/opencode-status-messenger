@@ -101,16 +101,8 @@ function createLogger(client) {
   };
 }
 
-// src/lib/utils.ts
-function extractProjectName(directory) {
-  if (directory) {
-    return directory.split("/").pop() || "Unknown";
-  }
-  return "Unknown";
-}
-
 // src/telegram-notify.ts
-var TelegramNotify = async ({ client, directory }) => {
+var TelegramNotify = async ({ client, directory, project }) => {
   const logger = createLogger(client);
   if (!isConfigured()) {
     logger.error("Plugin not configured. Please replace INSTALL_KEY and WORKER_URL placeholders.");
@@ -119,7 +111,8 @@ var TelegramNotify = async ({ client, directory }) => {
       }
     };
   }
-  const projectName = extractProjectName(directory);
+  const sourcePath = project?.worktree ?? directory;
+  const projectName = sourcePath?.split("/").pop() || "Unknown";
   return {
     event: async ({ event }) => {
       if (event.type === "session.idle") {

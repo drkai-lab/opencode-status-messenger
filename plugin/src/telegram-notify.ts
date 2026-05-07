@@ -2,9 +2,8 @@ import type { Plugin } from "@opencode-ai/plugin";
 import { sendNotification } from "./features/notify/service";
 import { isConfigured } from "./lib/config";
 import { createLogger } from "./lib/logger";
-import { extractProjectName } from "./lib/utils";
 
-export const TelegramNotify: Plugin = async ({ client, directory }) => {
+export const TelegramNotify: Plugin = async ({ client, directory, project }) => {
   const logger = createLogger(client);
 
   if (!isConfigured()) {
@@ -14,7 +13,8 @@ export const TelegramNotify: Plugin = async ({ client, directory }) => {
     };
   }
 
-  const projectName = extractProjectName(directory);
+  const sourcePath = project?.worktree ?? directory;
+  const projectName = sourcePath?.split("/").pop() || "Unknown";
 
   return {
     event: async ({ event }) => {
