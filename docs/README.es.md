@@ -35,7 +35,7 @@ Este proyecto consiste en dos componentes:
 
 La forma más fácil de comenzar usa el bot pre-desplegado:
 
-1. Inicia un chat con [@opencodetelegramnotificationbot](https://t.me/opencodetelegramnotificationbot)
+1. Inicia un chat con [@opencodestatusmessenger](https://t.me/opencodestatusmessenger)
 2. Envía `/start`
 3. El bot te envía un comando de instalación como:
    ```bash
@@ -52,7 +52,7 @@ Si prefieres instalación manual o estás usando un Worker personalizado:
 
 ### Paso 1: Obtén Tu Clave de Instalación
 
-1. Chatea con [@opencodetelegramnotificationbot](https://t.me/opencodetelegramnotificationbot)
+1. Chatea con [@opencodestatusmessenger](https://t.me/opencodestatusmessenger)
 2. Envía `/start` para recibir tu clave única de instalación
 
 ### Paso 2: Descarga el Archivo del Plugin

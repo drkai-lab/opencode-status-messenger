@@ -35,7 +35,7 @@
 
 最简单的方式是使用预部署的机器人：
 
-1. 与 [@opencodetelegramnotificationbot](https://t.me/opencodetelegramnotificationbot) 开始聊天
+1. 与 [@opencodestatusmessenger](https://t.me/opencodestatusmessenger) 开始聊天
 2. 发送 `/start`
 3. 机器人会向您发送安装命令，例如：
    ```bash
@@ -52,7 +52,7 @@
 
 ### 步骤1: 获取安装密钥
 
-1. 与 [@opencodetelegramnotificationbot](https://t.me/opencodetelegramnotificationbot) 聊天
+1. 与 [@opencodestatusmessenger](https://t.me/opencodestatusmessenger) 聊天
 2. 发送 `/start` 以接收您的唯一安装密钥
 
 ### 步骤2: 下载插件文件

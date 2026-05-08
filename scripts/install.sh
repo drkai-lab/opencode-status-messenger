@@ -8,9 +8,9 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Configuration
-WORKER_URL="${WORKER_URL:-https://opencode-telegram-bot.davasny.workers.dev}"
+WORKER_URL="${WORKER_URL:-https://opencode-telegram-bot.davasny.workers.dev}"  # Override with your own Worker URL
 PLUGIN_DIR="$HOME/.config/opencode/plugin"
-PLUGIN_URL="https://raw.githubusercontent.com/Davasny/opencode-telegram-notification-plugin/main/plugin/dist/telegram-notify.js"
+PLUGIN_URL="https://raw.githubusercontent.com/drkai-lab/opencode-status-messenger/main/plugin/dist/telegram-notify.js"
 
 main() {
     local install_key="$1"
